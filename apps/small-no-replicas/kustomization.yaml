@@ -1,0 +1,19 @@
+
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+resources:
+- configmap-app-0-0.yaml
+- configmap-app-0-1.yaml
+- service-app-0-0.yaml
+- service-app-0-1.yaml
+- deployment-app-0.yaml
+- configmap-app-1-0.yaml
+- configmap-app-1-1.yaml
+- service-app-1-0.yaml
+- service-app-1-1.yaml
+- deployment-app-1.yaml
+- configmap-app-2-0.yaml
+- configmap-app-2-1.yaml
+- service-app-2-0.yaml
+- service-app-2-1.yaml
+- deployment-app-2.yaml

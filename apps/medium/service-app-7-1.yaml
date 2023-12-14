@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/name: app-7
+    my.domain/sampleLabel1: "label-data-1"
+    my.domain/sampleLabel2: "label-data-2"
+    my.domain/sampleLabel3: "label-data-3"
+  name: app-7-service-1
+spec:
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: tcp-app
+    port: 16401
+    protocol: TCP
+    targetPort: 16401
+  selector:
+    app.kubernetes.io/name: app-7
+  sessionAffinity: None
+  type: ClusterIP
